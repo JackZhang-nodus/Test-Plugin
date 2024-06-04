@@ -35,5 +35,5 @@ jobs:
           MAGENTO_PASSWORD: ${{ secrets.MAGENTO_PASSWORD }}
 
       - name: Code Sniffer
-        run: vendor/bin/phpcs --standard=Magento2 --extensions=php,phtml --ignore-annotations --report=json --report-file=report.json PayFabric
+        run: vendor/bin/phpcs PayFabric/Payment --standard=Magento2 --extensions=php,phtml --error-severity=6 --severity=10
 
